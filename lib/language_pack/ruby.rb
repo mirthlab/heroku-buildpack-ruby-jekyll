@@ -421,6 +421,6 @@ params = CGI.parse(uri.query || "")
 
   def generate_jekyll_site
     puts "Building jekyll site"
-    run("env PATH=$PATH bundle exec jekyll")
+    run("env PATH=$PATH TZ=$TZ bundle exec jekyll")
   end
 end
