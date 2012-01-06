@@ -421,6 +421,7 @@ params = CGI.parse(uri.query || "")
 
   def generate_jekyll_site
     puts "Building jekyll site"
+    puts "Currently Time.now.zone = #{Time.now.zone}, TZ = #{`echo $TZ`}"
     run("env PATH=$PATH TZ=$TZ bundle exec jekyll")
   end
 end
